@@ -1,13 +1,16 @@
-{#Testing#} 
+{# Testing #} 
 
-{#
 {% set my_cool_string = 'wow! cool!' %}
 {% set my_second_cool_string = 'This is JINJA' %}
 {% set my_cool_number = 100 %}
-{% set my_animals = [ 'lemur', 'wolf', 'panther', 'tardigrade'] %}
 
 {{my_cool_string}} {{my_second_cool_string}}!
  I want to write Jinja for {{my_cool_number}} years!
+
+
+
+
+{% set my_animals = [ 'lemur', 'wolf', 'panther', 'tardigrade'] %}
 
 {{my_animals[0]}}
 {{my_animals[1]}}
@@ -18,7 +21,8 @@
     My favorite is the {{animal}}
 {% endfor %}
 
-#}
+
+
 {% set temperature = 45 %}
 
 {% if temperature < 65 %}
@@ -26,6 +30,9 @@
 {% else %}
     Time for a cold brew!
 {% endif %}
+
+
+
 
 {% set foods = ['carrot', 'hotdog', 'cucumber', 'bell pepper'] %}
 
