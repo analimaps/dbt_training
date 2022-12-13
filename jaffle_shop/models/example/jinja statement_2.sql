@@ -9,8 +9,9 @@
 
 
 
-
+{#
 {% set my_animals = [ 'lemur', 'wolf', 'panther', 'tardigrade'] %}
+
 
 {{my_animals[0]}}
 {{my_animals[1]}}
@@ -20,7 +21,7 @@
 {% for animal in my_animals %}
     My favorite is the {{animal}}
 {% endfor %}
-
+#}
 
 
 {% set temperature = 45 %}
