@@ -7,7 +7,7 @@
 {{my_animals[3]}}
 
 {% for animal in my_animals %}
-    My favorite is the {{animal}}
+    My favorite animal is the {{animal}}
 {% endfor %}
 
 
