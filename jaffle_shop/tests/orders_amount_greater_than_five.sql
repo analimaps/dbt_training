@@ -1,3 +1,5 @@
+{{ config( severity = "error", error_if = ">20" ) }}
+
 select 
     amount
 from {{ ref('fct_orders')}}
