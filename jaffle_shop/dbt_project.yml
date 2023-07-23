@@ -19,10 +19,10 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-target-path: "target"  # directory which will store compiled SQL files
-clean-targets:         # directories to be removed by `dbt clean`
-  - "target"
-  - "dbt_packages"
+target-path: "target" # directory which will store compiled SQL files
+clean-targets: # directories to be removed by `dbt clean`
+- "target"
+- "dbt_packages"
 
 
 # Configuring models
@@ -33,6 +33,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   jaffle_shop:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+  #all models should have unique and not_null
+  +required_tests: {"unique.*|not_null": 2}
+  # Config indicated by + and applies to all files under models/example/
+  example:
+  +materialized: view
